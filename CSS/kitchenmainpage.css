@@ -109,7 +109,7 @@ body
 p.mctitle
 {
     position:absolute;
-    top:165%;
+    top:170%;
     left: 6%;
     font-family: Marker Felt, fantasy;
     font-size: 35px;
@@ -120,7 +120,7 @@ p.mctitle
 p.content1
 {
     position:absolute;
-    top:105%;
+    top:110%;
     left: 30%;
     font-family: Bradley Hand, cursive;
     color: rgb(83, 88, 83);
@@ -130,7 +130,7 @@ p.content1
 p.content2
 {
     position:absolute;
-    top:125%;
+    top:130%;
     left: 4%;
     font-family: Monaco;
     color: rgb(83, 88, 83);
@@ -140,7 +140,7 @@ p.content2
 p.content3
 {
     position:absolute;
-    top:150%;
+    top:155%;
     left: 13%;
     font-family: Bradley Hand, cursive;
     color: rgb(83, 88, 83);
@@ -219,7 +219,59 @@ div.container-2
       
 }
 
-/*
+#IG
+{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    top: 160%;
+}
+#FB
+{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+}
+#Yelp
+{
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(190, 209, 207);
+    padding: 20px;
+    text-align: center;
+}
+
+footer img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer p {
+    display: inline;
+    font-size: large;
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+
+    text-decoration: underline;
+}
 .copyrights
 {
     text-align: left-end;
@@ -227,4 +279,3 @@ div.container-2
     color: black;
     padding: 10px 0;
 }
-*/

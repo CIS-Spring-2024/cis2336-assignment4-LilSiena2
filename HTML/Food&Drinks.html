@@ -5,6 +5,11 @@
     <img src="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/Images/NovaBites.png" class="logo" alt="diningstock">
     <link rel="stylesheet" href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/CSS/f&d.css">
     
+    <style> 
+    form {
+            margin-bottom: 100px; 
+        }
+    </style>
 </head>
 <body>
     <div class="nav">
@@ -12,8 +17,7 @@
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Food&Drinks.html" onclick="Food & Drinks"> Food & Drinks </a>
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/services.html" onclick="Services"> Services </a>
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Contact.us.html"onclick="Contact Us"> Contact Us </a>
-    </div>
-    <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/account.html"></a><button id="login">Login</button>
+        <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/account.html"><button id="login"> Login</button></a>
     </div>
 
     
@@ -59,57 +63,90 @@
     
     </section>
 
-    <form class="form">
+    <form class="form" id="orderForm">
         <fieldset>
-        <legend> Place Order</legend>
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" placeholder="ex: Lila" required><br>
-        <br><label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" placeholder="ex: Smith" required><br>
-        
-        <br><label for="order1">Select sandwich</label>
-        <select id="order1">
-            <option value="sandwichnone">None</option>
-            <option value="sandwich1">Classic BLT</option>
-            <option value="sandwich2">Turkey Club</option>
-            <option value="sandwich3">Egg Salad</option>
-            <option value="sandwich4">Caprese</option>
-            <option value="sandwich5">Chicken Salad</option>
-            <option value="sandwich6">Tuna Melt</option>
-            <option value="sandwich7">Vegetarian Panini</option>
-        </select><br>
-        <br><label for="order2">Select Coffee</label>
-        <select id="order2">
-            <option value="coffeenone">None</option>
-            <option value="coffee1">Drip Coffee</option>
-            <option value="coffee2">Espresso</option>
-            <option value="coffee3">Americano</option>
-            <option value="coffee4">Cafe Latte</option>
-            <option value="coffee5">Cappuccino</option>
-            <option value="coffee6">Cafe Mocha</option>
-            <option value="coffee7">Iced Coffee</option>
-            <option value="coffee8">Cold Brew Coffee</option>
-        </select><br>
-        <br><label for="order3">Select Sweet Treat</label>
-        <select id="order3">
-            <option value="treatnone">None</option>
-            <option value="treat1">Tiramisu</option>
-            <option value="treat2">Creme Brulee</option>
-            <option value="treat3">Pastries - Bread</option>
-            <option value="treat3">Pastries - Muffin</option>
-            <option value="treat3">Pastries - Scone</option>
-            <option value="treat3">Pastries - Baklava</option>
-            <option value="treat3">Pastries - Danish</option>
-        </select><br>
-        <br><input type="submit" value="Submit">
+            <legend>Place Order</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="ex: Lila" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="ex: Smith" required><br><br>
+            
+            <label for="order1">Select sandwich</label>
+            <select id="order1">
+                <option value="sandwichnone">None</option>
+                <option value="sandwich1">Classic BLT</option>
+                <option value="sandwich2">Turkey Club</option>
+                <option value="sandwich3">Egg Salad</option>
+                <option value="sandwich4">Caprese</option>
+                <option value="sandwich5">Chicken Salad</option>
+                <option value="sandwich6">Tuna Melt</option>
+                <option value="sandwich7">Vegetarian Panini</option>
+            </select><br><br>
+            
+            <label for="order2">Select Coffee</label>
+            <select id="order2">
+                <option value="coffeenone">None</option>
+                <option value="coffee1">Drip Coffee</option>
+                <option value="coffee2">Espresso</option>
+                <option value="coffee3">Americano</option>
+                <option value="coffee4">Cafe Latte</option>
+                <option value="coffee5">Cappuccino</option>
+                <option value="coffee6">Cafe Mocha</option>
+                <option value="coffee7">Iced Coffee</option>
+                <option value="coffee8">Cold Brew Coffee</option>
+            </select><br><br>
+            
+            <label for="order3">Select Sweet Treat</label>
+            <select id="order3">
+                <option value="treatnone">None</option>
+                <option value="treat1">Tiramisu</option>
+                <option value="treat2">Creme Brulee</option>
+                <option value="treat3">Pastries - Bread</option>
+                <option value="treat4">Pastries - Muffin</option>
+                <option value="treat5">Pastries - Scone</option>
+                <option value="treat6">Pastries - Baklava</option>
+                <option value="treat7">Pastries - Danish</option>
+            </select><br><br>
+            
+            <input type="submit" value="Submit">
         </fieldset>
     </form>
+    
+    <script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+    
+        // Get form values
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var sandwich = document.getElementById('order1').value;
+        var coffee = document.getElementById('order2').value;
+        var treat = document.getElementById('order3').value;
+    
+        // Do something with the form values (e.g., send them to a server)
+        console.log("First Name:", fname);
+        console.log("Last Name:", lname);
+        console.log("Sandwich:", sandwich);
+        console.log("Coffee:", coffee);
+        console.log("Sweet Treat:", treat);
+    
+        // Show alert after placing order
+        alert("Thank you, " + fname + " " + lname + "! Your order has been placed.");
+    });
+    </script>
     <br><a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Biography page.html"><button class="centerb01"> About me </button></a><br>
 </body>
 <footer>
+   
+    <img src="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/Images/Instastock.png" id="IG"><p style="display: inline-flex; font-size: large;"> @NovaBites</p>
+    <img src="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/Images/stockfb.png" id="FB"><p style="display: inline-flex; font-size: large;"> NovaBites</p>
+    <img src="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/Images/stockyelp.png" id="Yelp"><p style="display: inline-flex; font-size: large;"> NovaBites</p><br>
+    <p id="contactinfo"> Address: 123 Main St Houston, TX 77002 || Phone number: (832) 555-1234 </p>
+    
     <div class="copyrights">
-        &copy; 2024 Cougar Trove. All Rights Reserved.
+        &copy; 2024 Cougar Trove. All Rights Reserved.    
     </div>
+
 </footer>
 
 </html>

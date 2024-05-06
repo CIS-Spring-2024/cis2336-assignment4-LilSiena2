@@ -127,9 +127,41 @@ body
     color:#803D3B;
     text-align:center;
 
-
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(190, 209, 207);
+    padding: 20px;
+    text-align: center;
 }
 
+footer img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer p {
+    display: inline;
+    font-size: large;
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+
+    text-decoration: underline;
+}
 #IG
 {
     border-radius: 8px;

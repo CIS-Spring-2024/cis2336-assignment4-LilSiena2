@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-    <title> Account </title>
+<html lang="en">
 <head>
-    <h1 id="f01"> Login</h1>
-    <link rel="stylesheet" href="#">
+<title>Login & Register</title>
+    <img src="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/Images/NovaBites.png" class="logo" alt="diningstock">
+    <link rel="stylesheet" href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/CSS/account.css"> 
 </head>
 <body>
     <div class="nav">
@@ -11,8 +11,22 @@
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Food&Drinks.html" onclick="Food & Drinks"> Food & Drinks </a>
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/services.html" onclick="Services"> Services </a>
         <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Contact.us.html"onclick="Contact Us"> Contact Us </a>
+        <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/account.html"><button id="login"> Login</button></a>
+        <br><a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Biography page.html"><button class="centerb01"> About me </button></a><br>
     </div>
-    <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/account.html"></a><button id="login">Login</button>
+
+<!-- Login Form -->
+<form id="loginForm">
+    <fieldset>
+        <legend>Login to Your Account</legend>
+        <label for="loginUsername">Username:</label><br>
+        <input type="text" id="loginUsername" required><br><br>
+        <label for="loginPassword">Password:</label><br>
+        <input type="password" id="loginPassword" required><br><br>
+        <input type="submit" value="Login">
+        <p>Don't have an account? <a href="/Users/lilytran/Desktop/cis2336-assignment4-LilSiena2/HTML/Contact.us.html">Contact Us</a></p>
+    </fieldset>
+</form>
     
 </body>
 </html>
